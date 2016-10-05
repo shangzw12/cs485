@@ -29,7 +29,6 @@ int main(){
 	for(i =p_cmd_len-1;i<1000;i++){
 		cmd[i] = 'a';
 	}
-	//system(cmd);	
 	args[0] = "/usr/local/bin/submit"; args[1] = cmd; 
   	args[2] = "message"; args[3] = NULL;
   	env[0] = NULL;
