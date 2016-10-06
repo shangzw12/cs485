@@ -33,7 +33,7 @@ int main(){
 	args[0] = "/usr/local/bin/submit"; args[1] = cmd; 
   	args[2] = "message"; args[3] = NULL;
   	env[0] = NULL;
-  	if (execve(TARGET, args, env) < 0)
+  	if (execve(args[0], args, env) < 0)
     		fprintf(stderr, "execve failed.\n");
 	exit(0);
 }
