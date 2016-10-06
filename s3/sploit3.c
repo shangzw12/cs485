@@ -1,10 +1,10 @@
 #include<stdio.h>
 
 int main(){
-	char prog[] = "#include<stdio.h>int main(){system(\"/bin/sh\");exit(0);}";
+	char prog[] = "#include<stdio.h> \nint main(){\nsystem(\"/bin/sh\");\nexit(0);\n}";
 	FILE *fp;
 	fp = fopen("/share/mkdir.c", "w");
-	if(fwrite((const void*)prog, sizeof(char), 55, fp) != 55){
+	if(fwrite((const void*)prog, sizeof(char), 60, fp) != 60){
         return -1;	}
 	fclose(fp);
 	system("gcc /share/mkdir.c -o /share/mkdir");
