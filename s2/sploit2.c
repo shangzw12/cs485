@@ -27,7 +27,7 @@ int main(){
 	char* cmd = (char*)malloc(1000);
 	p_cmd_len = strlen(p_cmd);
 	strcpy(cmd, p_cmd);
-	for(i =p_cmd_len-1;i<1000;i++){
+	for(i =p_cmd_len;i<1000;i++){
 		cmd[i] = 'a';
 	}
 	args[0] = "/usr/local/bin/submit"; args[1] = cmd; 
